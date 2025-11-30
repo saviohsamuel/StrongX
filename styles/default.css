@@ -1,0 +1,78 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    ul {
+        list-style: none;
+    }
+}
+:root {
+    /* font family */
+    --font-primary: "Space Grotesk", sans-serif;
+    --font-secondary: "Orbitron", sans-serif;
+
+    /* font weight */
+    --f-w-r: 400;
+    --f-w-bold: 700;
+    --f-w-black: 900;
+
+    /* font size */
+    --f-s-t: 100px;
+    --f-s-h1: 56px;
+    --f-s-h2: 48px;
+    --f-s-h3: 36px;
+    --f-s-h4: 28px;
+    --f-s-h4-1: 32px;
+    --f-s-h5: 24px;
+    --f-s-h5-1: 24px;
+    --f-s-h6: 16px;
+    --f-s-xl: 20px;    
+    --f-s-l: 18px;    
+    --f-s-m: 16px;    
+    --f-s-s: 14px;
+    --caption: 12px;
+
+    /* font (shorthand) */
+    --f-f-title: var(--f-w-black) var(--f-s-t)/100% var(--font-secondary);
+    --f-f-h1: var(--f-w-black) var(--f-s-h1)/120% var(--font-secondary);
+    --f-f-h2: var(--f-w-black) var(--f-s-h2)/120% var(--font-secondary);
+    --f-f-h3: var(--f-w-black) var(--f-s-h3)/130% var(--font-secondary);
+    --f-f-h4: var(--f-w-black) var(--f-s-h4)/120% var(--font-secondary);
+    --f-f-h4-1: var(--f-w-bold) var(--f-s-h4-1)/120% var(--font-primary);
+    --f-f-h5: var(--f-w-black) var(--f-s-h5)/140% var(--font-secondary);
+    --f-f-h5-1: var(--f-w-bold) var(--f-s-h5-1)/140% var(--font-primary);
+    --f-f-h6: var(--f-w-black) var(--f-s-h6)/140% var(--font-secondary);
+
+    --f-f-xl: var(--f-w-r) var(--f-s-xl)/160% var(--font-primary);
+    --f-f-l: var(--f-w-r) var(--f-s-l)/160% var(--font-primary);
+    --f-f-m: var(--f-w-r) var(--f-s-m)/180% var(--font-primary);
+    --f-f-s: var(--f-w-r) var(--f-s-s)/180% var(--font-primary);
+
+    --primary-100: #F0DD35;
+    --primary-200: #EFD915;
+    --primary-300: #DEC912;
+    --primary-400: #BFAD0D;
+    --primary-500: #363105;
+    --neutral-100: #FFFFFF;
+    --neutral-200: #EFEFEF;
+    --neutral-300: #DCDCDC;
+    --neutral-400: #BDBDBD;
+    --neutral-500: #989898;
+    --neutral-600: #7C7C7C;
+    --neutral-700: #656565;
+    --neutral-800: #1A1A1A;
+    --neutral-900: #121212;
+}
+body {
+    font-family: var(--font-primary);
+    color: var(--neutral-200);    
+    background: var(--neutral-900);
+}
+a {
+    text-decoration: none;
+    color: var(--neutral-400);    
+    transition: color ease-in-out .4s;
+    &:hover {
+        color: var(--neutral-100);        
+    }
+}
