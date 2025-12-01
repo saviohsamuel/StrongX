@@ -17,20 +17,20 @@
     --f-w-black: 900;
 
     /* font size */
-    --f-s-t: 100px;
-    --f-s-h1: 56px;
-    --f-s-h2: 48px;
-    --f-s-h3: 36px;
-    --f-s-h4: 28px;
-    --f-s-h4-1: 32px;
-    --f-s-h5: 24px;
-    --f-s-h5-1: 24px;
-    --f-s-h6: 16px;
-    --f-s-xl: 20px;    
-    --f-s-l: 18px;    
-    --f-s-m: 16px;    
-    --f-s-s: 14px;
-    --caption: 12px;
+    --f-s-t: 6.25rem;
+    --f-s-h1: 3.5rem;
+    --f-s-h2: 3rem;
+    --f-s-h3: 2.25rem;
+    --f-s-h4: 1.75rem;
+    --f-s-h4-1: 2rem;
+    --f-s-h5: 1.5rem;
+    --f-s-h5-1: 1.5rem;
+    --f-s-h6: 1rem;
+    --f-s-xl: 1.25rem;    
+    --f-s-l: 1.125rem;    
+    --f-s-m: 1rem;    
+    --f-s-s: .875rem;
+    --caption: .75rem;
 
     /* font (shorthand) */
     --f-f-title: var(--f-w-black) var(--f-s-t)/100% var(--font-secondary);
