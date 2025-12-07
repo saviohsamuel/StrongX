@@ -62,16 +62,24 @@
     --neutral-700: #656565;
     --neutral-800: #1A1A1A;
     --neutral-900: #121212;
+    --background: #000000;
 }
 body {
     font-family: var(--font-primary);
     color: var(--neutral-200);    
-    background: var(--neutral-900);
+    background: var(--background);
+}
+main {    
+    width: 84.375rem;
+    max-width: 100%;
+    margin-inline: auto;
 }
 a {
+    font-weight: var(--f-w-bold);
     text-decoration: none;
     color: var(--neutral-400);    
     transition: color ease-in-out .4s;
+    cursor: pointer;
     &:hover {
         color: var(--neutral-100);        
     }
