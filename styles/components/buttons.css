@@ -1,0 +1,47 @@
+.btn {
+    border-radius: .5rem;
+    font: var(--f-f-m);
+    font-weight: var(--f-w-bold);
+    padding: .425rem 1.5625rem;
+    overflow: hidden;
+    gap: .5rem;
+}
+.btn.btn-primary {
+    background: var(--primary-200);    
+    color: var(--neutral-900);
+    &:hover {
+        background: var(--primary-300);                       
+    }
+}
+.btn-secondary {
+    background: var(--primary-500);
+    color: var(--primary-200);    
+    img {
+        width: 1rem;
+    }
+    &:hover {
+        span {
+            animation: moveText 0.5s ease-out forwards;
+        }
+        img {
+            animation: moveArrow 0.3s ease-out forwards;
+        }
+    }    
+}
+@keyframes moveText {
+    to {
+        transform: translateX(.8125rem);
+    }
+}
+@keyframes moveArrow {    
+    0% {
+        transform: translateX(0);
+    }    
+    20% {
+        opacity: 0.5;
+    }
+    100% {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+}
