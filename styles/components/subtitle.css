@@ -1,0 +1,21 @@
+.subtitle {
+    text-align: center;
+    margin-block: 3rem;
+    h2 {
+        font: var(--f-f-h4);
+        text-transform: uppercase;
+        color: var(--primary-200);
+    }
+    p {
+        font: var(--f-f-xl);
+        margin-top: 1.25rem;
+    }
+}
+@media (max-width: 37.5rem) {
+    .subtitle {
+        margin-block: 2rem;
+        p {
+            font: var(--f-f-m);            
+        }
+    }
+}
