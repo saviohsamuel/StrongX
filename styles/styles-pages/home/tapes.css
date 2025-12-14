@@ -1,0 +1,42 @@
+#tape {
+    height: 30vh;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    margin-block: 2.5rem 3rem;
+}
+.tape {
+    background: var(--primary-200);
+    padding: .9375rem 3.5rem;
+    position: absolute;
+    transform: rotate(-6deg);
+    width: 105%;
+    span {        
+        display: inline-block;
+        height: .5rem;
+        width: .5rem;
+        background: var(--neutral-900);
+        border-radius: 50%;
+    }
+    &:nth-child(2) {
+        z-index: -1;
+        background: var(--neutral-100);
+        transform: rotate(6deg);
+    }
+}
+.tape-content {
+    flex-shrink: 0;
+    gap: 1.75rem;
+    text-transform: uppercase;
+    font: var(--f-f-h5);
+    color: var(--neutral-900);
+}
+@media (max-width: 37.5rem) {
+    .tape {
+        padding: .5rem 1.5rem;
+        transform: rotate(-12deg);
+        &:nth-child(2) {        
+            transform: rotate(12deg);
+        }
+    }
+}

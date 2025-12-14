@@ -1,0 +1,38 @@
+.services-areas {
+    margin-block: 3rem 4rem;
+}
+.card {
+    position: relative;
+    overflow: hidden;
+    font: var(--f-f-h5);
+    flex: 0 0 20%;
+    width: 15rem;
+    height: 26.75rem;
+    img {
+        width: 100%;
+        height: 100%;
+        transition: transform 0.4s ease-in-out;   
+        object-fit: cover;
+    }
+    &:hover img {
+        transform: scale(1.17);           
+    }
+    span {
+        color: var(--neutral-100);
+        position: absolute;
+        text-transform: uppercase;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+}
+@media (max-width: 37.5rem) {
+    .services-areas {
+        flex-direction: column;
+    }
+    .card {
+        width: 100%;
+        height: 12.5625rem;                
+        flex: initial;
+    }
+}
