@@ -1,15 +1,14 @@
-header {
+#navigation {
     display: grid;      
     grid-template-columns: 12.5rem 1fr;        
     grid-template-rows: repeat(2, 1fr);    
     align-items: center;
-    padding-inline: 2.5rem;
+    padding-inline: 3rem;
 }
 .logo {
     grid-column: 1/2;
-    grid-row: 1/3;
-    font-size: 1.375rem;
-    font-weight: var(--f-w-bold);
+    grid-row: 1/3;    
+    font: 900 1.375rem/120% var(--font-secondary);
     color: var(--primary-200);             
     gap: .5625rem;
     &:hover {
@@ -21,8 +20,9 @@ header {
     grid-row: 1/2;
     font: var(--f-f-s);
     color: var(--neutral-200);    
-    border-bottom: 1px solid var(--neutral-800);
-    padding-block: .625rem;        
+    border-bottom: .0625rem solid var(--neutral-800);
+    padding-block: .625rem;    
+    position: relative;        
     figure {        
         gap: .5rem;  
     }
@@ -30,106 +30,136 @@ header {
         width: 1.125rem;
     }
 }
+.line {
+    height: .0625rem;
+    width: 18.75rem;
+    background: var(--neutral-800);
+    rotate: 45deg;
+    position: absolute;
+    top: 3.125rem;
+    left: -9.0625rem;
+}
 .contacts  {
     gap: 3rem;
     a {        
-        gap: .5rem;  
+        gap: .5rem;
+        font-weight: var(--f-w-r);
     }
 }
-nav {
+nav {    
     grid-column: 2/3; 
     grid-row: 2/3;
-    padding-block: .75rem;
+    padding-block: .625rem;
+    margin-left: 6.25rem;
 }
 .nav-links {
     gap: 3.5rem;
     & a {
-        position: relative;        
         animation: all 2s ease-in-out;        
     }
 }
 .services {
     position: relative;
-    .nav-services {
-        position: absolute;
-        top: 1.4375rem;
-        left: -.3125rem;
-        background: var(--neutral-900);        
-        border-radius: .5rem;
-        border: 1px solid var(--neutral-700);        
-        display: none;
-        & li {
-            margin-bottom: .3rem;
-        }         
-    } 
     svg {
         width: .75rem;
         transition: all .4s ease-in-out;
-    }    
-    /* aparecer o menu services no desktop
-        &:hover .nav-services {
-        display: block;
-        }
-    */
+    }        
+    &:hover .nav-services {
+        opacity: 1;
+        visibility: visible;
+        pointer-events: auto;
+    }
     &:hover {
-        path {            
-            fill: var(--neutral-200);    
-        }
         svg {
             rotate: 180deg;
         }
+        path {            
+            fill: var(--neutral-200);    
+        }
     }
 }
+.nav-services {
+    position: absolute;
+    z-index: 3;
+    top: 1.925rem;
+    left: -1rem;
+    width: 7.5rem;
+    background: var(--neutral-900);        
+    border-radius: .5rem;
+    border: .0625rem solid var(--neutral-700);        
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity .3s ease, visibility 0s linear .3s;
+    & li {
+        margin: .3rem;
+        padding: .2rem;
+        border-radius: .2rem;
+        &:hover {
+            background: var(--neutral-800);
+        }
+        a {
+            font-weight: var(--f-w-r);
+        }
+        &:hover a {
+            color: var(--neutral-100);
+        }
+    }         
+} 
 @media (max-width: 37.5rem) {
-    header {
-        grid-template-columns: 8fr 1fr;        
-        grid-template-rows: 3.125rem auto; 
-        padding-inline: .5rem;        
+    #navigation {
+        grid-template-columns: 8fr auto;        
+        grid-template-rows: auto;         
+        padding: .5rem .3rem;        
+    }
+    header#navigation nav.flex,
+    .infos {
+        display: none;
     }
     .menu {
         grid-column: 2/3;
-        grid-row: 1/2;
-        padding: .75rem;              
+        grid-row: 1/2;                
         div {
+            align-self: center;
             height: .125rem;
             width: 1.25rem;
             background: var(--neutral-500);
             border-radius: .5rem;
-            margin-bottom: .5rem;
+            margin-block: .5rem;
         }
     }
     .logo {        
+        grid-column: 1/2;
         grid-row: 1/2;
-    }    
-    nav {           
-        grid-column: 1/4;     
-        grid-row: 2/3;          
-        .btn {
-            display: none;
-        }
+    }
+    nav {
+        grid-column: 1/4;
+        margin-left: 1rem;               
     }
     .nav-links {
-        flex-direction: column;
+        flex-direction: column;        
         font: var(--f-f-h5-1);
-        width: 100%;
-        row-gap: .5rem;
-        display: none; /*exibe itens do menu */
+        row-gap: .5rem;     
+        width: 100%;                     
         li {
-            padding-block: .3rem .8rem;
-            border-bottom: 1px solid var(--neutral-800);                                      
+            padding-block: .3rem .3rem;
+            border-bottom: .0625rem solid var(--neutral-800);            
         }
         & li:last-child {
             border: none;
         }
     }
     .services {
-        position: initial;                
+        position: initial;                           
         .nav-services {
+            font: var(--f-f-m);       
+            display: flex;
+            flex-wrap: wrap;
             position: initial;
             border: none; 
-            background: none;
-            display: flex;                               
-            flex-wrap: wrap;                           
+            background: none;  
+            opacity: 1;
+            visibility: visible;              
+            width: 100%;            
             li {
                 margin: .2rem;
                 justify-content: start;
@@ -150,8 +180,8 @@ nav {
         align-items: start;
         border-radius: .5rem;
         padding: .75rem 1rem;
-        gap: .75rem;     
-        display: none; /*exibe itens do menu */
+        gap: .75rem;       
+        margin-bottom: 4rem;              
     }
     .contacts {
         gap: .75rem;        

@@ -16,14 +16,14 @@
 .btn-secondary {
     background: var(--primary-500);
     color: var(--primary-200);    
-    img {
+    svg {
         width: 1rem;
     }
     &:hover {
         span {
             animation: moveText 0.5s ease-out forwards;
         }
-        img {
+        svg {
             animation: moveArrow 0.3s ease-out forwards;
         }
     }    
