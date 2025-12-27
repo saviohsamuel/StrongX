@@ -4,6 +4,8 @@
     justify-content: center;
     position: relative;
     margin-block: 2.5rem 3rem;
+    padding: 8rem;
+    overflow: hidden;
 }
 .tape {
     background: var(--primary-200);

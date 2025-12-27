@@ -2,7 +2,7 @@
     text-align: center;
     margin-block: 3rem;
     h2 {
-        font: var(--f-f-h4);
+        font: var(--f-f-h3);
         text-transform: uppercase;
         color: var(--primary-200);
     }
